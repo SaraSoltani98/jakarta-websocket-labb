@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+
+<h:head>
+    <title>appUser Login</title>
+</h:head>
+
+<h:body>
+
+    <h2>Login</h2>
+
+    <h:form>
+
+        <h:outputText value="#{appUserloginBean.errorMessage}"
+                      rendered="#{not empty appUserloginBean.errorMessage}"/>
+        <br/><br/>
+
+        <h:inputText value="#{appUserloginBean.username}" placeholder="Username"/>
+        <br/><br/>
+
+        <h:inputSecret value="#{appUserloginBean.password}" placeholder="Password"/>
+        <br/><br/>
+
+        <h:commandButton value="Login" action="#{appUserloginBean.login}"/>
+
+    </h:form>
+
+</h:body>
+</html>
