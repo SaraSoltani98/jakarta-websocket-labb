@@ -35,7 +35,7 @@
         const sendBtn = document.getElementById("sendBtn");
         const username = document.getElementById("loggedUser").textContent;
 
-        const wsUrl = "ws://localhost:8080/labb1-jakarta/ws/chat";
+        const wsUrl = "ws://localhost:8080/websocket-labb1-1.0-SNAPSHOT/chat";
         const socket = new WebSocket(wsUrl);
 
         socket.addEventListener("open", () => {
