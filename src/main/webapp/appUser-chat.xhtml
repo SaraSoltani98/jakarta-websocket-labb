@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html">
-
 <h:head>
     <title>Chat</title>
 </h:head>
-
 <h:body>
-
     <h2>WebSocket-klient</h2>
-
     <p>Inloggad som: <span id="loggedUser">#{appUserloginBean.loggedInUser.username}</span></p>
-
     <div>
         Status: <span id="status">DISCONNECTED</span>
     </div>
-
     <div>
         <input id="input" type="text" placeholder="Skriv ett meddelande..."/>
         <button id="sendBtn" type="button">Skicka</button>
         <button type="button" onclick="disconnect()">Disconnect</button>
     </div>
-
     <pre id="log"></pre>
 
     <h:form>

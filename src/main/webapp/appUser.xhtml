@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
-      xmlns:f="jakarta.faces.core">
+      xmlns:ui="jakarta.faces.facelets">
 
 <h:head>
     <title>App Users</title>
@@ -21,17 +21,18 @@
 
     <h2>Alla användare</h2>
 
-    <h:dataTable value="#{appUserBean.appUsers}" var="user" border="1">
-        <h:column>
-            <f:facet name="header">ID</f:facet>
-            #{user.id}
-        </h:column>
-        <h:column>
-            <f:facet name="header">Username</f:facet>
-            #{user.username}
-        </h:column>
-    </h:dataTable>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+        </tr>
+        <ui:repeat value="#{appUserBean.appUsers}" var="user">
+            <tr>
+                <td>#{user.id}</td>
+                <td>#{user.username}</td>
+            </tr>
+        </ui:repeat>
+    </table>
 
 </h:body>
-
 </html>

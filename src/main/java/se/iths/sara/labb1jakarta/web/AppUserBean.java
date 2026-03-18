@@ -14,7 +14,6 @@ import java.util.List;
 
 @Named
 @ViewScoped
-
 public class AppUserBean implements Serializable {
     private static final long serialVersionUID = 1L;
 

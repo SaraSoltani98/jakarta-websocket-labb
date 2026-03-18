@@ -13,32 +13,26 @@ import java.io.Serializable;
 @Named
 @SessionScoped
 public class AppUserloginBean implements Serializable {
-
     @Getter
     @Setter
     private String username;
     @Getter
     @Setter
     private String password;
-
     @Getter
     private AppUser loggedInUser;
-
     @Getter
     private String errorMessage;
-
     @Inject
     private AppUserService appUserService;
 
     public String login() {
 
         loggedInUser = appUserService.login(username, password);
-
         if (loggedInUser != null) {
             errorMessage = null;
             return "appUser-chat.xhtml?faces-redirect=true";
         }
-
         errorMessage = "Fel användarnamn eller lösenord";
         return null;
     }
@@ -50,5 +44,4 @@ public class AppUserloginBean implements Serializable {
         errorMessage = null;
         return "appUser-login.xhtml?faces-redirect=true";
     }
-
 }

@@ -30,7 +30,6 @@ public class AppUserService {
         if (user != null && user.getPassword().equals(password)) {
             return user;
         }
-
         return null;
     }
 }
